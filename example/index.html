@@ -8,6 +8,11 @@
         .indentcode{
             margin: 0 0 0 40px;
         }
+        .expcode{
+            border: 1px solid #333;
+            background: #e3e3e3;
+            padding:10px;
+        }
     </style>
     <title>Bootstrop</title>
 </head>
@@ -398,7 +403,7 @@
             </select>
         </div>
     </div>
-    <h3 class="text-danger">表单组合</h3>
+    <h3 class="text-danger">水平排列</h3>
     <form class="form-horizontal">
         <div class="form-group">
             <label class="col-sm-2 control-label">电子邮件</label>
@@ -407,6 +412,97 @@
             </div>
         </div>
     </form>
+    <h3 class="text-danger">复选框和单选框</h3>
+    <p class="text-primary">复选框点击文字也可以使用 checkbox</p>
+    <div class="indentcode">
+        <div class="checkbox">
+            <label> <input type="checkbox">体育 </label>
+        </div>
+        <div class="checkbox">
+            <label> <input type="checkbox">音乐 </label>
+        </div>
+    </div>
+    <p class="text-primary">复选框点击文字也可以使用 在lable里面checkbox-inline</p>
+    <div class="indentcode">
+        <label class="checkbox-inline"> <input type="checkbox">体育 </label>
+        <label class="checkbox-inline"> <input type="checkbox">音乐 </label>
+    </div>
+    <h3 class="text-danger">下拉列表框</h3>
+    <p class="text-primary">在原有的select元素里面加入 form-control类</p>
+    <div class="indentcode">
+        <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+
+    <h3 class="text-danger">校验状态</h3>
+    <p class="text-primary">
+        has-error错误状态 has-success成功状态 has-warning警告状态<br>
+        lable标签同步出现状态 需要在标签里面 control-label
+    </p>
+    <div class="indentcode">
+        <form>
+            <div class="form-group has-error">
+                <label class="control-label">错误状态</label>
+                <input type="email" class="form-control" placeholder="请输入电子邮件">
+            </div>
+            <div class="form-group has-success">
+                <label class="control-label">成功状态</label>
+                <input type="email" class="form-control" placeholder="请输入电子邮件">
+            </div>
+            <div class="form-group has-warning">
+                <label class="control-label">警告状态</label>
+                <input type="email" class="form-control" placeholder="请输入电子邮件">
+            </div>
+        </form>
+    </div>
+    <h3 class="text-danger">添加额外的图标</h3>
+    <p class="text-primary">文本框右侧内置文本图标 在父级元素中加入 has-feedback 在input元素下面加入span元素form-control-feedback</p>
+    <div class="indentcode">
+        <form>
+            <div class="form-group has-success has-feedback">
+                <label class="control-label">成功状态</label>
+                <input type="email" class="form-control" placeholder="请输入电子邮件">
+                <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+            </div>
+        </form>
+    </div>
+    <h3 class="text-danger">控制尺寸大小</h3>
+    <p class="text-primary"> input-lg大控件  input-sm小控件</p>
+    <input type="text" class="form-control input-lg">
+    <input type="text" class="form-control input">
+    <input type="text" class="form-control input-sm">
+
+    <h3 class="text-danger">图片</h3>
+    <div class="indentcode">
+        <p class="text-primary">不同的表现形式 img-rounded圆角 img-circle圆形切图 img-thumbnail有圆角框的矩形图片</p>
+        <img src="img/pic.png" alt="图片" class="img-rounded">
+        <img src="img/pic.png" alt="图片" class="img-circle">
+        <img src="img/pic.png" alt="图片" class="img-thumbnail">
+        <p class="text-primary">响应式图片</p>
+        <img src="img/pic.jpg" alt="图片" class="img-responsive">
+    </div>
+    <h1 class="page-header">栅格化系统</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1 expcode">1</div>
+            <div class="col-md-1 expcode">2</div>
+            <div class="col-md-1 expcode">3</div>
+            <div class="col-md-1 expcode">4</div>
+            <div class="col-md-1 expcode">5</div>
+            <div class="col-md-1 expcode">6</div>
+            <div class="col-md-1 expcode">7</div>
+            <div class="col-md-1 expcode">8</div>
+            <div class="col-md-1 expcode">9</div>
+            <div class="col-md-1 expcode">10</div>
+            <div class="col-md-1 expcode">11</div>
+            <div class="col-md-1 expcode">12</div>
+        </div>
+    </div>
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
