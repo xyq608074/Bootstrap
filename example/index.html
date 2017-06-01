@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .indentcode{
+            margin: 0 0 0 40px;
+        }
+    </style>
+    <title>Bootstrop</title>
+</head>
+<body class="container">
+    <h1 class="page-header">排版样式</h1>
+    <h3 class="text-danger">页面排版</h3>
+    <p class="text-primary">Bootstrap 将全局 font-size 设置为 14px，line-height 行高设置为20px; p段落元素被设置等于 1/2 行高(即 10px)；颜色被设置为#333。
+    <br>创建包含突出的段落文本 (class="lead")</p>
+        <div class="indentcode">
+            <p>Bootstrap 框架</p>
+            <p class="lead">Bootstrap 框架</p>
+            <p>Bootstrap 框架</p>
+        </div>
+    <h3 class="text-danger">标题</h3>
+        <div class="indentcode">
+            <h1>Bootstrap 框架 36px</h1>
+            <h2>Bootstrap 框架 30px</h2>
+            <h3>Bootstrap 框架 24px</h3>
+            <h4>Bootstrap 框架 18px</h4>
+            <h5>Bootstrap 框架 14px</h5>
+            <h6>Bootstrap 框架 12px</h6>
+        </div>
+    <p class="text-primary">普通内联样式中也可以使用 class="h1~h6"定义</p>
+        <div class="indentcode">
+            <span class="h1">内联样式被定义成h1</span>
+            <span class="h2">内联样式被定义成h2</span>
+            <span class="h3">内联样式被定义成h3</span>
+            <span class="h4">内联样式被定义成h4</span>
+        </div>
+    <p class="text-primary">在标题元素中插入 small 元素</p>
+        <div class="indentcode">
+            <h1>Bootstrap <small>框架</small></h1>
+            <h2>Bootstrap <small>框架</small></h2>
+            <h3>Bootstrap <small>框架</small></h3>
+            <h4>Bootstrap <small>框架</small></h4>
+        </div>
+    <h3 class="text-danger">内联文本元素 </h3>
+    <p class="text-primary">mark元素或.mark 类 字体颜色会变成#000颜色 还有一个非常浅的背景颜色 </p>
+        <div class="indentcode">
+            <p>Bootstrap <mark>框架</mark></p>
+        </div>
+    <p class="text-primary">各种加线条的文本 </p>
+        <div class="indentcode">
+            <del>Bootstrap 框架</del> //删除的文本<br> <s>Bootstrap 框架</s> //无用的文本<br> <ins>Bootstrap 框架</ins> //插入的文本<br> <u>Bootstrap 框架</u> //效果同上，下划线文本
+        </div>
+    <p class="text-primary">各种强调文本 </p>
+        <div class="indentcode">
+            <small>Bootstrap 框架</small> //标准字号的 85%<br> <strong>Bootstrap 框架</strong> //加粗 700<br> <em>Bootstrap 框架</em> //倾斜
+        </div>
+
+    <h3 class="text-danger">对齐</h3>
+    <p class="text-primary">设置文本对齐</p>
+        <div class="indentcode">
+            <p class="text-left">居左 text-left</p>
+            <p class="text-center">居中 text-center</p>
+            <p class="text-right">居右 text-right</p>
+            <p class="text-justify">两端对齐,支持度不是太好 text-justify</p>
+            <p class="text-nowrap">文本字体坚决不换行 text-nowrap</p>
+        </div>
+    <h3 class="text-danger">大小写</h3>
+        <p class="text-primary">设置字体大小</p>
+        <div class="indentcode">
+            <p class="text-lowercase">Bootstrap框架 text-lowercase 全部小写</p>
+            <p class="text-uppercase">Bootstrap 框架 text-uppercase 全部大写</p>
+            <p class="text-capitalize">Bootstrap框架 text-capitalize 首字母大写</p>
+        </div>
+    <h3 class="text-danger">缩略语</h3>
+    <p class="text-primary">和原有标签没有什么区别 在里面多出来的initialism类 就是设置了一下 字体是原有字体的90%和全大写</p>
+    <div class="indentcode">
+        The <abbr title="People's Republic of China" class="initialism">PRC</abbr> was founded in 1949.
+    </div>
+    <h3 class="text-danger">地址文本</h3>
+    <p class="text-primary">给address元素 去掉了倾斜，设置了行高，底部 20px</p>
+        <div class="indentcode">
+            <address>
+                <strong>Twitter, Inc.</strong><br>
+                　　795 Folsom Ave, Suite 600<br>
+                　　San Francisco, CA 94107<br>
+                <abbr title="Phone">P:</abbr> (123) 456-7890
+            </address>
+        </div>
+    <h3 class="text-danger">引用文本</h3>
+    <p class="text-primary">对与 blockquote元素增加了做边线，设定了字体大小和内外边距</p>
+    <div class="indentcode">
+        <blockquote>Bootstrap框架</blockquote>
+        <blockquote class="blockquote-reverse">Bootstrap框架 blockquote-reverse</blockquote>
+    </div>
+
+    <h3 class="text-danger">列表排版</h3>
+    <div class="indentcode">
+        <p class="text-primary">移出了默认样式 list-unstyled</p>
+        <ul class="list-unstyled">
+            <li>Bootstrap框架</li>
+            <li>Bootstrap框架</li>
+            <li>Bootstrap框架</li>
+            <li>Bootstrap框架</li>
+            <li>Bootstrap框架</li>
+        </ul>
+        <p class="text-primary">内联样式 list-inline(横着显示)</p>
+        <ul class="list-inline">
+            <li>Bootstrap框架</li>
+            <li>Bootstrap框架</li>
+            <li>Bootstrap框架</li>
+            <li>Bootstrap框架</li>
+            <li>Bootstrap框架</li>
+        </ul>
+        <p class="text-primary">水平排列描述列表 dl-horizontal</p>
+        <dl class="dl-horizontal">
+            <dt>Bootstrap</dt>
+            <dd>Bootstrap 提供了一些常规设计好的页面排版的样式供开发者使用。</dd>
+        </dl>
+    </div>
+    <h3 class="text-danger">代码</h3>
+    <div class="indentcode">
+        <p class="text-primary">内联代码</p>
+        <code>&lt;section&gt;</code>
+        <p class="text-primary">提醒用户输入组合按键</p>
+        请按 <kbd>Ctrl + Shift + S</kbd> 保存
+        <p class="text-primary">代码块</p>
+        <pre>&lt;p&gt;Please input...&lt;/p&gt;</pre>
+    </div>
+
+    <h1 class="page-header">表格和按钮</h1>
+    <h3 class="text-danger">表格</h3>
+    <div class="indentcode">
+        <p class="text-primary">基本表格样式 class="table"</p>
+        <table class="table">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+        </table>
+        <p class="text-primary">条纹表格样式 table table-striped</p>
+        <table class="table table-striped">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        </table>
+        <p class="text-primary">带边框的表格 table table-bordered</p>
+        <table class="table table-bordered">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        </table>
+
+        <p class="text-primary">鼠标悬停的表格 table table-hover</p>
+        <table class="table table-hover">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        </table>
+        <p class="text-primary">带有状态的表格 在tr或者td中加入 success成功顺利 danger禁止 info提示信息 warning警告注意 active鼠标悬停在行或单元格上 </p>
+        <table class="table table-bordered">
+            <tr class="success">
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr class="danger">
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr class="active">
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr class="warning">
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td class="info">1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        </table>
+        <p class="text-primary">隐藏某一行 sr-only</p>
+        <table class="table table-bordered">
+            <tr class="sr-only">
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+        </table>
+
+        <p class="text-primary">隐藏某一行 sr-only</p>
+        <table class="table table-responsive">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+        </table>
+    </div>
+
+    <h3 class="text-danger">按钮</h3>
+    <p class="text-primary">
+        btn-default 普通按钮
+        btn-success 成功样式(绿色)
+        btn-info 一般信息样式(浅蓝)
+        btn-warning 警告样式(黄色)
+        btn-danger 危险样式(红色)
+        btn-primary 首选项样式(深蓝)
+        btn-link 连接样式
+        <br>
+        btn-lg 大按钮   btn 默认  btn-sm 小按钮   btn-xs 超小按钮
+    </p>
+    <div class="indentcode">
+        <button class="btn btn-default btn-lg">button</button>
+        <button class="btn btn-success btn-lg">button</button>
+        <button class="btn btn-info btn-lg">button</button>
+        <button class="btn btn-warning btn-lg">button</button>
+        <button class="btn btn-danger btn-lg">button</button>
+        <button class="btn btn-primary btn-lg">button</button>
+        <button class="btn btn-link btn-lg">button</button>
+        <br><br>
+        <button class="btn btn-default">button</button>
+        <button class="btn btn-success">button</button>
+        <button class="btn btn-info">button</button>
+        <button class="btn btn-warning">button</button>
+        <button class="btn btn-danger">button</button>
+        <button class="btn btn-primary">button</button>
+        <button class="btn btn-link">button</button>
+        <br><br>
+        <button class="btn btn-default btn-sm">button</button>
+        <button class="btn btn-success btn-sm">button</button>
+        <button class="btn btn-info btn-sm">button</button>
+        <button class="btn btn-warning btn-sm">button</button>
+        <button class="btn btn-danger btn-sm">button</button>
+        <button class="btn btn-primary btn-sm">button</button>
+        <button class="btn btn-link btn-sm">button</button>
+        <br><br>
+        <button class="btn btn-default btn-xs">button</button>
+        <button class="btn btn-success btn-xs">button</button>
+        <button class="btn btn-info btn-xs">button</button>
+        <button class="btn btn-warning btn-xs">button</button>
+        <button class="btn btn-danger btn-xs">button</button>
+        <button class="btn btn-primary btn-xs">button</button>
+        <button class="btn btn-link btn-xs">button</button>
+    </div>
+
+    <h3 class="text-danger">块级按钮</h3>
+    <p class="text-primary"> btn-block 块级按钮</p>
+    <div class="indentcode">
+        <button class="btn btn-block">button</button>
+        <button class="btn btn-block">button</button>
+    </div>
+
+    <h3 class="text-danger">激活按钮 和 禁用按钮</h3>
+    <p class="text-primary"> active 激活按钮  disabled 禁用按钮</p>
+    <div class="indentcode">
+        <button class="btn btn-block active">button</button>
+        <button class="btn btn-block disabled">button</button>
+    </div>
+
+    <h1 class="page-header">表单和图片</h1>
+    <h3 class="text-danger">表单</h3>
+    <p class="text-primary">普通表单  form-group组</p>
+    <div class="indentcode">
+        <form>
+            <div class="form-group">
+                <label>电子邮件</label>
+                <input type="email" class="form-control" placeholder="请输入电子邮件">
+            </div>
+            <div class="form-group">
+                <label>密码</label>
+                <input type="password" class="form-control" placeholder="请输入密码">
+            </div>
+        </form>
+    </div>
+    <p class="text-primary">内联表单</p>
+    <div class="indentcode">
+        <form class="form-inline">
+            <div class="form-group">
+                <label>电子邮件</label>
+                <input type="email" class="form-control" placeholder="请输入电子邮件">
+            </div>
+            <div class="form-group">
+                <label>密码</label>
+                <input type="password" class="form-control" placeholder="请输入密码">
+            </div>
+        </form>
+    </div>
+
+
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
