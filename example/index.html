@@ -347,7 +347,6 @@
         <button class="btn btn-block active">button</button>
         <button class="btn btn-block disabled">button</button>
     </div>
-
     <h1 class="page-header">表单和图片</h1>
     <h3 class="text-danger">表单</h3>
     <p class="text-primary">普通表单  form-group组</p>
@@ -364,6 +363,7 @@
         </form>
     </div>
     <p class="text-primary">内联表单</p>
+    <p class="text-danger">备注:当小于 768px，会恢复独占样式</p>
     <div class="indentcode">
         <form class="form-inline">
             <div class="form-group">
@@ -376,8 +376,37 @@
             </div>
         </form>
     </div>
-
-
+    <h3 class="text-danger">表单组合</h3>
+    <p class="text-primary">增加前后片段</p>
+    <div class="indentcode">
+        <div class="input-group">
+            <div class="input-group-addon">￥</div>
+            <input type="text" class="form-control">
+            <div class="input-group-addon">.00</div>
+        </div>
+        <br/>
+        <div class="input-group">
+            <div class="input-group-addon">邮箱</div>
+            <input type="text" class="form-control">
+            <div class="input-group-addon">@</div>
+            <select class="form-control">
+                <option value="163">163.com</option>
+                <option value="qq">QQ.com</option>
+                <option value="126">126.com</option>
+                <option value="139">139.com</option>
+                <option value="gmail">gmail.com</option>
+            </select>
+        </div>
+    </div>
+    <h3 class="text-danger">表单组合</h3>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">电子邮件</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" placeholder="请输入您的电子邮件">
+            </div>
+        </div>
+    </form>
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
