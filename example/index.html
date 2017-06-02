@@ -13,6 +13,35 @@
             background: #e3e3e3;
             padding:10px;
         }
+        .bs-icon{
+            margin: 0 -10px 20px;
+            overflow: hidden;
+        }
+        .bs-icon-list{
+            padding-left: 0;
+            list-style: none;
+        }
+        .bs-icon-list li{
+            float: left;
+            width: 25%;
+            height: 115px;
+            padding: 10px;
+            font-size: 10px;
+            line-height: 1.4;
+            text-align: center;
+            background-color: #f9f9f9;
+            border: 1px solid #fff;
+        }
+        .bs-icon .glyphicon{
+            margin-top: 5px;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        .bs-icon .glyphicon-class{
+            display: block;
+            text-align: center;
+            word-wrap: break-word;
+        }
     </style>
     <title>Bootstrop</title>
 </head>
@@ -473,9 +502,11 @@
     </div>
     <h3 class="text-danger">控制尺寸大小</h3>
     <p class="text-primary"> input-lg大控件  input-sm小控件</p>
-    <input type="text" class="form-control input-lg">
-    <input type="text" class="form-control input">
-    <input type="text" class="form-control input-sm">
+    <div class="indentcode">
+        <input type="text" class="form-control input-lg">
+        <input type="text" class="form-control input">
+        <input type="text" class="form-control input-sm">
+    </div>
 
     <h3 class="text-danger">图片</h3>
     <div class="indentcode">
@@ -487,6 +518,7 @@
         <img src="img/pic.jpg" alt="图片" class="img-responsive">
     </div>
     <h1 class="page-header">栅格化系统</h1>
+    <p class="text-primary">创建最多 12 列的响应式行</p>
     <div class="container">
         <div class="row">
             <div class="col-md-1 expcode">1</div>
@@ -503,6 +535,1573 @@
             <div class="col-md-1 expcode">12</div>
         </div>
     </div>
+    <br>
+    <p class="text-primary">总列数都是 12，每列分配多列</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 expcode">1-4</div>
+            <div class="col-md-4 expcode">5-8</div>
+            <div class="col-md-4 expcode">9-12</div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 expcode">1-8</div>
+            <div class="col-md-4 expcode">9-12</div>
+        </div>
+    </div>
+    <br>
+    <p class="text-primary">
+        四种屏幕分类全部激活  容器的自适应宽度为：超小屏(<768px)、小屏(>=768px)、中屏(>=992px)和大屏(>=1200px) <br>
+        col-lg-3 如果大于1200 占12份中的3份 也就是4列 <br>
+        col-md-4 如果大于992  占12份中的4份 也就是3列 <br>
+        col-sm-6 如果大于768  占12份中的6份 也就是2列 <br>
+        col-xs-12如果小于768  占12份中的12份 也就是1列 <br>
+    </p>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 expcode">4</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 expcode">4</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 expcode">4</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 expcode">4</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 expcode">4</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 expcode">4</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 expcode">4</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 expcode">4</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 expcode">4</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 expcode">4</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 expcode">4</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 expcode">4</div>
+        </div>
+    </div>
+
+    <p class="text-primary">可以设置列偏移，让中间保持空隙 col-md-offset-1 便宜一行</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 expcode">8</div>
+            <div class="col-md-3 col-md-offset-1 expcode">3</div>
+        </div>
+    </div>
+    <p class="text-primary">嵌套 占满12行 形成网页排版模式(在嵌套方法中嵌套进去的栅格也是12个计算)</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 expcode">
+                <div class="col-md-8 expcode">1-8</div>
+                <div class="col-md-4 expcode">9-12</div>
+            </div>
+            <div class="col-md-3 expcode"> 11-12 </div>
+        </div>
+    </div>
+    <p class="text-primary">两个列交换位置，push 向左移动(col-md-push-3)，pull 向右移动(col-md-pull-9)</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-md-push-3 a">9</div>
+            <div class="col-md-3 col-md-pull-9 a">3</div>
+        </div>
+    </div>
+
+    <h1 class="page-header">辅助类和响应式工具</h1>
+    <div class="indentcode">
+        <p class="text-primary">关闭按钮 在最右面 class="close"</p>
+        <button class="close">&times;</button>
+        <div class="clearfix"></div>
+        <p class="text-primary">三角符号  caret</p>
+        <span class="caret"></span>
+        <p class="text-primary">快速浮动 pull-left pull-right </p>
+        <p class="pull-left expcode">左面</p>
+        <p class="pull-right expcode">右面</p>
+        <div class="clearfix"></div>
+        <p class="text-primary">块级居中  center-block</p>
+        <p class="center-block expcode">块级居中</p>
+        <p class="text-primary">取消浮动  clearfix</p>
+        <code>
+            &lt;div class="clearfix"&gt;&lt;/div&gt;
+        </code>
+        <p class="text-primary">显示和隐藏 class="show" class="hidden"</p>
+        <div class="show">show</div>
+        <div class="hidden">hidden</div>
+        <h3 class="text-danger">响应式工具</h3>
+        <p class="text-primary">在媒体查询时，针对不同的屏幕大小，有时需要显示和隐藏部分内容。响应式工具类，就提供了这种解决方案。</p>
+        <img src="img/pingmu.png" alt="">
+        <h1 class="page-header">图标菜单和按钮组件</h1>
+        <h3 class="text-danger">小图标</h3>
+        <div class="bs-icon">
+            <ul class="bs-icon-list">
+                <li>
+                    <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-asterisk</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-plus</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-euro</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-eur" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-eur</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-minus</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-cloud</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-envelope</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-pencil</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-glass" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-glass</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-music" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-music</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-search</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-heart</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-star</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-star-empty</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-user</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-film</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-th-large</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-th</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-th-list</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-ok</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-remove</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-zoom-in</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-zoom-out" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-zoom-out</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-off</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-signal</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-cog</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-trash</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-home</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-file</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-time</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-road" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-road</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-download-alt</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-download" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-download</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-upload</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-inbox" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-inbox</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-play-circle</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-repeat</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-refresh</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-list-alt</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-lock</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-flag</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-headphones</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-volume-off" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-volume-off</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-volume-down" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-volume-down</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-volume-up</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-qrcode</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-barcode" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-barcode</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-tag</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-tags</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-book</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-bookmark</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-print</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-camera</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-font" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-font</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-bold" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-bold</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-italic" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-italic</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-text-height" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-text-height</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-text-width" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-text-width</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-align-left</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-align-center" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-align-center</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-align-right</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-align-justify</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-list</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-indent-left" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-indent-left</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-indent-right" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-indent-right</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-facetime-video</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-picture</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-map-marker</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-adjust" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-adjust</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-tint" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-tint</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-edit</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-share" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-share</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-check</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-move" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-move</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-step-backward</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-fast-backward" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-fast-backward</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-backward" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-backward</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-play</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-pause</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-stop" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-stop</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-forward</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-fast-forward" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-fast-forward</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-step-forward</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-eject" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-eject</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-chevron-left</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-chevron-right</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-plus-sign</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-minus-sign</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-remove-sign</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-ok-sign</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-question-sign</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-info-sign</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-screenshot</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-remove-circle</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-ok-circle</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-ban-circle</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-arrow-left</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-arrow-right</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-arrow-up</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-arrow-down</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-share-alt</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-resize-full</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-resize-small" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-resize-small</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-exclamation-sign</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-gift" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-gift</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-leaf</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-fire" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-fire</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-eye-open</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-eye-close</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-warning-sign</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-plane" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-plane</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-calendar</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-random</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-comment</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-magnet" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-magnet</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-chevron-up</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-chevron-down</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-retweet" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-retweet</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-shopping-cart</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-folder-close</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-folder-open</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-resize-vertical" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-resize-vertical</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-resize-horizontal" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-resize-horizontal</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-hdd" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-hdd</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-bullhorn</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-bell</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-certificate</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-thumbs-up</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-thumbs-down</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-hand-right</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-hand-left</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-hand-up</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-hand-down" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-hand-down</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-circle-arrow-right</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-circle-arrow-left</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-circle-arrow-up</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-circle-arrow-down</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-globe</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-wrench</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-tasks</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-filter" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-filter</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-briefcase</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-fullscreen</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-dashboard</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-paperclip</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-heart-empty</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-link</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-phone</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-pushpin</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-usd</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-gbp" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-gbp</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-sort" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-sort</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-sort-by-alphabet" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-sort-by-alphabet</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-sort-by-alphabet-alt" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-sort-by-alphabet-alt</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-sort-by-order" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-sort-by-order</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-sort-by-order-alt" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-sort-by-order-alt</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-sort-by-attributes</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-sort-by-attributes-alt" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-sort-by-attributes-alt</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-unchecked</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-expand" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-expand</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-collapse-down" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-collapse-down</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-collapse-up" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-collapse-up</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-log-in</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-flash</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-log-out</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-new-window</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-record</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-save" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-save</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-open" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-open</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-saved" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-saved</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-import" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-import</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-export" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-export</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-send</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-floppy-disk</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-floppy-saved</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-floppy-remove" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-floppy-remove</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-floppy-save</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-floppy-open" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-floppy-open</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-credit-card</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-transfer" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-transfer</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-cutlery</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-header" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-header</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-compressed" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-compressed</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-earphone</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-phone-alt</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-tower" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-tower</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-stats</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-sd-video" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-sd-video</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-hd-video" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-hd-video</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-subtitles" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-subtitles</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-sound-stereo" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-sound-stereo</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-sound-dolby" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-sound-dolby</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-sound-5-1" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-sound-5-1</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-sound-6-1" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-sound-6-1</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-sound-7-1" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-sound-7-1</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-copyright-mark</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-registration-mark" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-registration-mark</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-cloud-download</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-cloud-upload</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-tree-conifer" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-tree-conifer</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-tree-deciduous" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-tree-deciduous</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-cd" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-cd</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-save-file" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-save-file</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-open-file" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-open-file</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-level-up" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-level-up</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-copy" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-copy</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-paste" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-paste</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-alert</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-equalizer</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-king" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-king</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-queen" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-queen</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-pawn" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-pawn</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-bishop" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-bishop</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-knight" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-knight</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-baby-formula" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-baby-formula</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-tent" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-tent</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-blackboard</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-bed" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-bed</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-apple</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-erase" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-erase</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-hourglass</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-lamp" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-lamp</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-duplicate" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-duplicate</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-piggy-bank</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-scissors" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-scissors</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-bitcoin" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-bitcoin</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-btc" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-btc</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-xbt" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-xbt</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-yen" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-yen</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-jpy" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-jpy</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-ruble" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-ruble</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-rub" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-rub</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-scale" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-scale</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-ice-lolly" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-ice-lolly</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-ice-lolly-tasted" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-ice-lolly-tasted</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-education</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-option-horizontal</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-option-vertical</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-menu-hamburger</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-modal-window" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-modal-window</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-oil" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-oil</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-grain" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-grain</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-sunglasses</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-text-size" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-text-size</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-text-color" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-text-color</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-text-background" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-text-background</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-object-align-top" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-object-align-top</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-object-align-bottom" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-object-align-bottom</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-object-align-horizontal" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-object-align-horizontal</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-object-align-left" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-object-align-left</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-object-align-vertical" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-object-align-vertical</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-object-align-right" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-object-align-right</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-triangle-right</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-triangle-left</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-triangle-bottom</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-triangle-top</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-console" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-console</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-superscript" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-superscript</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-subscript" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-subscript</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-menu-left</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-menu-right</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-menu-down</span>
+                </li>
+
+                <li>
+                    <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
+                    <span class="glyphicon-class">glyphicon glyphicon-menu-up</span>
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="text-danger">下拉列表框</h3>
+        <p class="text-primary">下拉菜单，就是点击一个元素或按钮，触发隐藏的列表显示出来。<b class="text-danger">注意:必须引入JQuery文件,而且JQuery文件还要在bootstrap.js前面</b></p>
+        <div class="dropdown">
+            <button class="btn btn-default" data-toggle="dropdown">
+                下拉列表按钮
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="">首页</a></li>
+                <li><a href="">列表页</a></li>
+                <li><a href="">详情页</a></li>
+                <li><a href="">关于页</a></li>
+                <li><a href="">帮助页</a></li>
+            </ul>
+        </div>
+        <br>
+        <p class="text-primary">
+            .dropup 菜单可以向上打开  .dorpdown 菜单可以向下打开<br>
+            .dropdown-menu-right 菜单可以在右面显示打开 <br>
+            在li里面加入 .dorpdown-header 可以实现给菜单加一个标题 不要有a超链接标签,在插入一个li标签 .divider可以实现有个分割线
+        </p>
+        <div class="dropup">
+            <div class="btn-group" data-toggle="dropdown">
+                <button class="btn btn-primary">下拉列表按钮</button>
+                <button class="btn btn-primary"><span class="caret"></span></button>
+            </div>
+            <ul class="dropdown-menu ">
+                <li class="dropdown-header">首页</li>
+                <li class="divider"></li>
+                <li><a href="">列表页</a></li>
+                <li><a href="">详情页</a></li>
+                <li><a href="">关于页</a></li>
+                <li><a href="">帮助页</a></li>
+            </ul>
+        </div>
+        <h3 class="text-danger">按钮组组件</h3>
+        <p class="text-primary">基本格式 .btn-group 按钮组   .btn-group-vertical可以垂直排列按钮组   .btn-group-justified可以设置两端对齐按钮组(两端对齐按钮组要用a标签)</p>
+        <div class="btn-group">
+            <button class="btn btn-default">左</button>
+            <button class="btn btn-default">中</button>
+            <button class="btn btn-default">右</button>
+        </div>
+        <div class="btn-group-vertical">
+            <button class="btn btn-default">左</button>
+            <button class="btn btn-default">中</button>
+            <button class="btn btn-default">右</button>
+        </div>
+        <div class="btn-group-justified">
+            <a class="btn btn-default">左</a>
+            <a class="btn btn-default">中</a>
+            <a class="btn btn-default">右</a>
+        </div>
+        <p class="text-primary">将多个按钮组整合起来便于管理 .btn-toolbar</p>
+        <div class="btn-toolbar">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default"> 左 </button>
+                <button type="button" class="btn btn-default"> 中 </button>
+                <button type="button" class="btn btn-default"> 右 </button>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-default"> 1 </button>
+                <button type="button" class="btn btn-default"> 2 </button>
+                <button type="button" class="btn btn-default"> 3 </button>
+            </div>
+        </div>
+        <p class="text-primary">嵌套一个菜单 在做下拉菜单的时候一定要把下拉按钮和下拉元素做一个.btn-group组里面 不然会出现下拉列表偏移</p>
+        <div class="dropdown">
+            <div class="btn-group">
+                <button class="btn btn-default">首页</button>
+                <div class="btn-group">
+                    <button class="btn btn-default" data-toggle="dropdown">
+                        列表页
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">列表页1</a></li>
+                        <li><a href="#">列表页2</a></li>
+                        <li><a href="#">列表页3</a></li>
+                        <li><a href="#">列表页4</a></li>
+                    </ul>
+                </div>
+                <button class="btn btn-default">内容页</button>
+                <button class="btn btn-default">详情页</button>
+            </div>
+        </div>
+    </div>
+    <h1 class="page-header">导航组件</h1>
+    <h3 class="text-danger">导航组件</h3>
+    <p class="text-primary">基本导航组件 .nav-tabs   禁用.disabled</p>
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#" >首页</a></li>
+        <li><a href="#">列表页</a></li>
+        <li><a href="#">内容页</a></li>
+        <li class="disabled"><a href="#">详情页</a></li>
+    </ul>
+    <p class="text-primary">胶囊导航组件 .nav-pills</p>
+    <ul class="nav nav-pills ">
+        <li class="active"><a href="#" >首页</a></li>
+        <li><a href="#">列表页</a></li>
+        <li><a href="#">内容页</a></li>
+        <li><a href="#">详情页</a></li>
+    </ul>
+    <p class="text-primary">垂直胶囊导航 .nav-pills .nav-stacked</p>
+    <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#" >首页</a></li>
+        <li><a href="#">列表页</a></li>
+        <li><a href="#">内容页</a></li>
+        <li><a href="#">详情页</a></li>
+    </ul>
+    <p class="text-primary">两端对齐胶囊导航 .nav-pills .nav-justified</p>
+    <ul class="nav nav-pills nav-justified">
+        <li class="active"><a href="#" >首页</a></li>
+        <li><a href="#">列表页</a></li>
+        <li><a href="#">内容页</a></li>
+        <li><a href="#">详情页</a></li>
+    </ul>
+
+    <h3 class="text-danger">导航条组件</h3>
+    <p class="text-primary">两种基本导航  默认导航 navbar-default(灰白色)   反转颜色navbar-inverse(黑色)</p>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="#">首页2</a></li>
+                <li><a href="#">首页3</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="#">首页2</a></li>
+                <li><a href="#">首页3</a></li>
+            </ul>
+        </div>
+    </nav>
+    <p class="text-primary">导航 包括标题列表和表单</p>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="#">产品列表</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">优惠活动</a></li>
+                <li><a href="#">帮助</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <div class="input-group">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default"> 提交 </button>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </nav>
+<br>
+<script src="js/jquery-3.2.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
